@@ -387,6 +387,11 @@ def voice_to_text():
 
     except Exception as e:
         return jsonify({"error": f"Voice processing failed: {str(e)}"}), 500
+    
+@app.route('/')
+def home():
+    return '🧠 SyncVerse Backend is running!'
+
 
     
 if __name__ == "__main__":
